@@ -29,17 +29,18 @@ export function ProductModal({
           <span className='absolute left-0 bottom-0 w-full h-1 bg-gradient-to-r from-green-300 via-teal-200 to-blue-300 rounded'></span>
           {/* <span className='absolute left-0 bottom-0 w-full h-1 bg-gradient-to-r from-orange-300 via-pink-200 to-purple-300 rounded'></span> */}
         </h1>
-        <img
-          src={thumbnail}
-          alt={title}
-          className='w-auto h-auto border border-gray-400 rounded-xl overflow-hidden mx-auto mb-8'
-        />
+        <div className="relative w-full max-w-[600px] aspect-[16/9] mx-auto mb-8">
+          <img
+            src={thumbnail}
+            alt={title}
+            className="absolute inset-0 w-full h-full object-cover border border-gray-400 rounded-xl"
+          />
+        </div>
         {children}
       </div>
     </Modal>
   )
 }
-
 
 export function PMSection({
   heading,

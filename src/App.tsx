@@ -5,17 +5,20 @@ import NoteIcon from './assets/logos/note.svg?react';
 import mainVisual from './assets/main-visual.jpg';
 import profileBg from './assets/profile-bg.jpg';
 import profile from './assets/profile.jpg';
-import Certification from './components/certification';
 import Footer from './components/footer';
 import MainContainer from './components/mainContainer';
-import Product from './components/product';
-import Research from './components/Research';
-import { certifications } from './contents/certifications';
-import { products } from './contents/products';
-import { domesticConferences, theses } from './contents/research';
+import { Modal, ModalCloseButton } from './components/modal';
+import Certification from './features/certifications/Certification';
+import { certifications } from './features/certifications/contents';
+import { products } from './features/products/contents';
+import Product from './features/products/Product';
+import { domesticConferences, internationalConferences, theses } from './features/research/contents';
+import Research from './features/research/Research';
+import { useIsMobile } from './hooks/useIsMobile';
 import useModal from './hooks/useModal';
 
 export default function App() {
+  const isMobile = useIsMobile();
   const [isOpen, openModal, closeModal] = useModal();
 
   return (
@@ -90,18 +93,111 @@ export default function App() {
                   </p>
                 </div>
                 <div className='flex gap-4 justify-center text-sm'>
-                  <button className='bg-mga-3 text-white rounded-3xl w-32 px-4 py-2 cursor-pointer transition-colors duration-300 hover:bg-mga-2 hover:text-mga-3'>
+                  <button onClick={() => openModal('academic-history')} className='bg-mga-3 text-white rounded-3xl w-36 px-4 py-2 cursor-pointer transition-colors duration-300 hover:bg-mga-2 hover:text-mga-3'>
                     <FontAwesomeIcon icon={faGraduationCap} className='mr-1' />
-                    学歴
+                    学歴・留学歴
                   </button>
-                  <button className='bg-mga-3 text-white rounded-3xl w-32 px-4 py-2 cursor-pointer transition-colors duration-300 hover:bg-mga-2 hover:text-mga-3'>
+                  <button onClick={() => openModal('award-history')} className='bg-mga-3 text-white rounded-3xl w-36 px-4 py-2 cursor-pointer transition-colors duration-300 hover:bg-mga-2 hover:text-mga-3'>
                     <FontAwesomeIcon icon={faAward} className='mr-1' />
-                    受賞歴
+                    表彰・受賞歴
                   </button>
                 </div>
               </div>
             </div>
+            <Modal isOpen={isOpen('academic-history')} bgClose={closeModal} className='relative w-[85%] max-w-2xl h-8/12 bg-mga-6 rounded-xl'>
+              {isMobile ? (
+                <ModalCloseButton theme='green' top={12} right={12} size='sm' onClose={closeModal} />
+              ) : (
+                <ModalCloseButton theme='green' top={16} right={16} size='md' onClose={closeModal} />
+              )}
+              <div className='w-full sm:max-w-xl my-4 mx-auto px-4'>
+                <h1 className='relative w-fit text-white text-xl md:text-2xl font-semibold text-center px-2 pb-0.5 mx-auto mb-8'>
+                  学歴・留学歴
+                </h1>
+                <div className='flex flex-col space-y-3 text-white'>
+                  <div className='border-b border-mga-2 pb-3'>
+                    <h2 className='font-bold text-mga-2 mb-0.5'>2019.4-2022.3</h2>
+                    <ul className='text-sm list-disc ml-6'>
+                      <li>岡山県立岡山工業高等学校 情報技術科</li>
+                    </ul>
+                  </div>
+                  <div className='border-b border-mga-2 pb-3'>
+                    <h2 className='font-bold text-mga-2 mb-0.5'>2022.4-2026.3</h2>
+                    <ul className='text-sm list-disc ml-6'>
+                      <li>岡山大学 工学部 工学科 情報・電気・数理データサイエンス系 情報工学コース</li>
+                      <li>コンヴィヴィアルコンピューティング研究室</li>
+                    </ul>
+                  </div>
+                  <div className='border-b border-mga-2 pb-3'>
+                    <h2 className='font-bold text-mga-2 mb-0.5'>2023.8-2023.9</h2>
+                    <ul className='text-sm list-disc ml-6'>
+                      <li>Ruhr Universität Bochum / ZFA (Summer School 2023)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </Modal>
+            <Modal isOpen={isOpen('award-history')} bgClose={closeModal} className='relative w-[85%] max-w-2xl h-8/12 bg-mga-6 rounded-xl'>
+              {isMobile ? (
+                <ModalCloseButton theme='green' top={12} right={12} size='sm' onClose={closeModal} />
+              ) : (
+                <ModalCloseButton theme='green' top={16} right={16} size='md' onClose={closeModal} />
+              )}
+              <div className='w-full sm:max-w-xl my-4 mx-auto px-4'>
+                <h1 className='relative w-fit text-white text-xl md:text-2xl font-semibold text-center px-2 pb-0.5 mx-auto mb-8'>
+                  表彰・受賞歴
+                </h1>
+                <div className='flex flex-col space-y-3 text-white'>
+                  <div className='border-b border-mga-2 pb-3'>
+                    <h2 className='font-bold text-mga-2 mb-0.5'>2021.2.12</h2>
+                    <ul className='text-sm list-disc ml-6'>
+                      <li>第65回 情報技術検定 特別表彰</li>
+                    </ul>
+                  </div>
+                  <div className='border-b border-mga-2 pb-3'>
+                    <h2 className='font-bold text-mga-2 mb-0.5'>2021.8.4</h2>
+                    <ul className='text-sm list-disc ml-6'>
+                      <li>岡山県高等学校職業教育技術顕彰</li>
+                    </ul>
+                  </div>
+                  <div className='border-b border-mga-2 pb-3'>
+                    <h2 className='font-bold text-mga-2 mb-0.5'>2022.2.3</h2>
+                    <ul className='text-sm list-disc ml-6'>
+                      <li>岡山県高等学校工業教育技術顕彰</li>
+                    </ul>
+                  </div>
+                  <div className='border-b border-mga-2 pb-3'>
+                    <h2 className='font-bold text-mga-2 mb-0.5'>2022.2.8</h2>
+                    <ul className='text-sm list-disc ml-6'>
+                      <li>岡山県立岡山工業高等学校 情報技術科 優等賞</li>
+                      <li>ジュニアマイスター顕彰 全国工業高等学校長協会理事長賞 (121pt)</li>
+                    </ul>
+                  </div>
+                  <div className='border-b border-mga-2 pb-3'>
+                    <h2 className='font-bold text-mga-2 mb-0.5'>2024.5.xx</h2>
+                    <ul className='text-sm list-disc ml-6'>
+                      <li>岡山大学工学部 成績優秀賞</li>
+                    </ul>
+                  </div>
+                  <div className='border-b border-mga-2 pb-3'>
+                    <h2 className='font-bold text-mga-2 mb-0.5'>2025.5.xx</h2>
+                    <ul className='text-sm list-disc ml-6'>
+                      <li>岡山大学工学部 成績優秀賞</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h2 className='font-bold text-mga-2 mb-0.5'>2025.11.1</h2>
+                    <ul className='text-sm list-disc ml-6'>
+                      <li>第8回 金光賞</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </Modal>
           </div>
+          {/* <div>
+            留学・海外旅行日記のリンク
+          </div> */}
         </section>
 
         <section id='certifications' className='bg-radial-light py-12 px-4 sm:px-6 lg:px-8 scroll-mt-20'>
@@ -126,7 +222,7 @@ export default function App() {
           <div className='max-w-5xl mx-auto'>
             <h1 className='text-3xl text-mga-black font-semibold text-center mb-8'>Research</h1>
             <div className='space-y-4'>
-              {/* <Research title='国際学会' works={internationalConferences} color='purple' /> */}
+              <Research title='国際学会' works={internationalConferences} color='purple' />
               <Research title='国内研究会' works={domesticConferences} color='blue' />
               <Research title='学位論文' works={theses} color='green' />
             </div>
@@ -148,7 +244,7 @@ export default function App() {
                     award={award}
                     onClick={() => openModal(id)}
                   />
-                  <Modal isOpen={isOpen(id)} closeModal={closeModal} />
+                  <Modal isOpen={isOpen(id)} closeModal={closeModal} thumbnail={img} />
                 </div>
               )}
             </div>
@@ -169,12 +265,8 @@ export default function App() {
             <NoteIcon className='w-6 h-6 fill-current' />
           </a>
         </section>
-        
-        {/* サイドバー */}
       </MainContainer>
       <Footer />
     </>
   )
 }
-
-// github,(webサイトのリンク←いる？),1:2でのサムネ作成,

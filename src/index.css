@@ -6,6 +6,9 @@
   --color-mga-2: #ddffa2;
   --color-mga-3: #002928;
   --color-mga-4: #e9fee1;
+  --color-mga-5: #1f916a;
+  --color-mga-6: #005e3c;
+  --color-mga-7: #8fc31f;
   --color-mga-black: #002928;
   --color-mga-blue: #27baab;
   --color-mga-purple: #8e77f5;
@@ -15,15 +18,6 @@
 
   --bg-radial-dark:  radial-gradient(ellipse at 210% 20%, #A4CE7A 0%, #A4CE7A 21%, #002928 93%);
   --bg-radial-light: radial-gradient(circle at center, #ddffa2 0%, #bce670 100%);
-  --bg-gradient-1: radial-gradient(
-    circle at center,
-    rgba(255, 255, 255, 0.15) 0%,
-    rgba(255, 255, 255, 0.05) 20%,
-    var(--color-mga-1) 60%,
-    var(--color-mga-1) 100%
-  );
-
-
 }
 
 @utility bg-radial-dark {
@@ -32,8 +26,4 @@
 
 @utility bg-radial-light {
   background-image: var(--bg-radial-light);
-}
-
-@utility bg-gradient-1 {
-  background-image: var(--bg-gradient-1);
 }

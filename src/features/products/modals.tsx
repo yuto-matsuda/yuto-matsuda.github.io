@@ -1,23 +1,21 @@
-import bugImg from '@/assets/buguttoru.jpg';
-import cetImg from '@/assets/certificate-exam-tracer.png';
-import coronaImg from '@/assets/coropita.png';
-import hkImg from '@/assets/heiterkeit.png';
-import sleemuuImg from '@/assets/sleemuu.png';
+import hkCMSImg from '@/assets/heiterkeit-cms.png';
+import sleemuuPRImg from '@/assets/sleemuu-PR.webp';
 import sushiVideo from '@/assets/sushi-king.mp4';
-import sushiImg from '@/assets/sushiking.png';
-import shImg from '@/assets/web-syntaxhighlighter.png';
 import shMethodImg from '@/assets/web-syntaxhighlighter_method.png';
+import Link from '@/components/link';
 import { PMList, PMParagraph, PMSection, ProductModal } from "./components";
 
 export function CoropitaModal({
   isOpen,
-  closeModal
+  closeModal,
+  thumbnail
 }: {
   isOpen: boolean
   closeModal: () => void
+  thumbnail: string
 }) {
   return (
-    <ProductModal isOpen={isOpen} closeModal={closeModal} title='コロピタ' thumbnail={coronaImg}>
+    <ProductModal isOpen={isOpen} closeModal={closeModal} title='コロピタ' thumbnail={thumbnail}>
       <PMSection heading='プロダクト概要'>
         <PMParagraph>
           当時蔓延していたコロナの予防を促進することを目的としたWebアプリです。
@@ -29,6 +27,8 @@ export function CoropitaModal({
         <PMList>
           <li>Ruby on Rails</li>
           <li>jQuery</li>
+          <li>Ajax</li>
+          <li>SQLite</li>
         </PMList>
       </PMSection>
    </ProductModal>     
@@ -37,13 +37,15 @@ export function CoropitaModal({
 
 export function BugttoruModal({
   isOpen,
-  closeModal
+  closeModal,
+  thumbnail
 }: {
   isOpen: boolean
   closeModal: () => void
+  thumbnail: string
 }) {
   return (
-    <ProductModal isOpen={isOpen} closeModal={closeModal} title='バグっとる' thumbnail={bugImg}>
+    <ProductModal isOpen={isOpen} closeModal={closeModal} title='バグっとる' thumbnail={thumbnail}>
       <PMSection heading='プロダクト概要'>
         <PMParagraph>
           入った虫を自動で捕まえるIoT虫カゴです。
@@ -66,13 +68,15 @@ export function BugttoruModal({
 
 export function HeiterkeitModal({
   isOpen,
-  closeModal
+  closeModal,
+  thumbnail
 }: {
   isOpen: boolean
   closeModal: () => void
+  thumbnail: string
 }) {
   return (
-    <ProductModal isOpen={isOpen} closeModal={closeModal} title='Heiterkeit' thumbnail={hkImg}>
+    <ProductModal isOpen={isOpen} closeModal={closeModal} title='Heiterkeit' thumbnail={thumbnail}>
       <PMSection heading='プロダクト概要'>
         <PMParagraph>
           プログラミングや語学について発信する自作ブログです。
@@ -85,8 +89,15 @@ export function HeiterkeitModal({
           <li>ConoHa VPS</li>
         </PMList>
       </PMSection>
+      <PMSection heading='CMS'>
+        <img
+          src={hkCMSImg}
+          alt='Heiterkeit CMS'
+          className='w-full border border-gray-400 rounded-lg mx-auto mb-8'
+        />
+      </PMSection>
       <PMSection heading='リンク'>
-        <a href='https://cocolab.jp/' target='_blank' className='text-mga-blue border-b border-mga-blue px-1'>Heiterkeit</a>
+        <Link to='https://heiterkeit.jp/'>Heiterkeit</Link>
       </PMSection>
    </ProductModal>     
   )
@@ -94,13 +105,15 @@ export function HeiterkeitModal({
 
 export function SushiKingModal({
   isOpen,
-  closeModal
+  closeModal,
+  thumbnail
 }: {
   isOpen: boolean
   closeModal: () => void
+  thumbnail: string
 }) {
   return (
-    <ProductModal isOpen={isOpen} closeModal={closeModal} title='SUSHI KING' thumbnail={sushiImg}>
+    <ProductModal isOpen={isOpen} closeModal={closeModal} title='SUSHI KING' thumbnail={thumbnail}>
       <PMSection heading='プロダクト概要'>
         <PMParagraph>
           Webブラウザ上で動作するおすし屋さんシミュレーションゲームです。
@@ -121,19 +134,24 @@ export function SushiKingModal({
           className='w-full border border-gray-400 rounded-lg mx-auto mb-8'
         />
       </PMSection>
+      <PMSection heading='リンク'>
+        <Link to='https://prapro-ou.github.io/FILO/production'>SUSHI KING</Link>
+      </PMSection>
    </ProductModal>     
   )
 }
 
 export function WebSyntaxHighlighterModal({
   isOpen,
-  closeModal
+  closeModal,
+  thumbnail
 }: {
   isOpen: boolean
   closeModal: () => void
+  thumbnail: string
 }) {
   return (
-    <ProductModal isOpen={isOpen} closeModal={closeModal} title='Web SyntaxHighlighter' thumbnail={shImg}>
+    <ProductModal isOpen={isOpen} closeModal={closeModal} title='Web SyntaxHighlighter' thumbnail={thumbnail}>
       <PMSection heading='プロダクト概要'>
         <PMParagraph>
           Webコンテンツへの組み込みを目的として作成したVSCode風シンタックスハイライタです。
@@ -154,19 +172,24 @@ export function WebSyntaxHighlighterModal({
           className='w-full border border-gray-400 rounded-lg mx-auto mb-8'
         />
       </PMSection>
+      <PMSection heading='リンク'>
+        <Link to='https://yuto-matsuda.github.io/web-syntax-highlighter/'>Web SyntaxHighlighter</Link>
+      </PMSection>
    </ProductModal>     
   )
 }
 
 export function CertificateExamModal({
   isOpen,
-  closeModal
+  closeModal,
+  thumbnail
 }: {
   isOpen: boolean
   closeModal: () => void
+  thumbnail: string
 }) {
   return (
-    <ProductModal isOpen={isOpen} closeModal={closeModal} title='情報技術検定1級対策モジュール' thumbnail={cetImg}>
+    <ProductModal isOpen={isOpen} closeModal={closeModal} title='情報技術検定1級対策モジュール' thumbnail={thumbnail}>
       <PMSection heading='プロダクト概要'>
         <PMParagraph>
           教育実習中に開発した、情報技術検定1級対策用の補助教材です。
@@ -178,19 +201,24 @@ export function CertificateExamModal({
           <li>React</li>
         </PMList>
       </PMSection>
+      <PMSection heading='リンク'>
+        <Link to='https://yuto-matsuda.github.io/certificate-exam-tracer/'>情報技術検定1級対策モジュール</Link>
+      </PMSection>
    </ProductModal>     
   )
 }
 
 export function SleemuuModal({
   isOpen,
-  closeModal
+  closeModal,
+  thumbnail
 }: {
   isOpen: boolean
   closeModal: () => void
+  thumbnail: string
 }) {
   return (
-    <ProductModal isOpen={isOpen} closeModal={closeModal} title='Sleemuu' thumbnail={sleemuuImg}>
+    <ProductModal isOpen={isOpen} closeModal={closeModal} title='Sleemuu' thumbnail={thumbnail}>
       <PMSection heading='プロダクト概要'>
         <PMParagraph>
           チームみんなで「良い睡眠」を取ることでペットを育てる、協力型睡眠改善アプリです。
@@ -208,7 +236,7 @@ export function SleemuuModal({
       </PMSection>
       <PMSection heading='アプリPR'>
         <img
-          src={shMethodImg}
+          src={sleemuuPRImg}
           alt='Sleemuu PR'
           className='w-full border border-gray-400 rounded-lg mx-auto mb-8'
         />

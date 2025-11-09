@@ -69,7 +69,7 @@ export function AccordionTrigger({
 
   return (
     <div
-      className={`cursor-pointer ${className}`}
+      className={className}
       onClick={() => ctx.setOpenItem(groupId, isOpen ? null : itemId)}
     >
       {children}

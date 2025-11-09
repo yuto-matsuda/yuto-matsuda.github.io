@@ -31,6 +31,7 @@ export function Modal({
 export function ModalCloseButton({
   onClose,
   size,
+  theme,
   top,
   right,
   bottom,
@@ -38,6 +39,7 @@ export function ModalCloseButton({
 }: {
   onClose: () => void
   size: 'sm' | 'md' | 'lg'
+  theme?: 'green' 
   top?: number
   right?: number
   bottom?: number
@@ -49,13 +51,21 @@ export function ModalCloseButton({
     lg: 'w-8 h-8',
   };
 
+  const bgColor = theme === 'green'
+    ? 'group bg-mga-3 border border-mga-2 hover:bg-mga-2 hover:border-mga-3'
+    : 'hover:bg-gray-300'
+
+  const color = theme === 'green'
+    ? 'text-mga-2 group-hover:text-mga-3 transition-colors duration-300'
+    : 'text-gray-500'
+
   return (
     <button
       onClick={onClose}
-      className='absolute flex items-center justify-center cursor-pointer rounded-full transition-colors duration-300 hover:bg-gray-300 p-1'
+      className={`absolute flex items-center justify-center cursor-pointer rounded-full transition-colors duration-300 p-1 ${bgColor}`}
       style={{ top, right, bottom, left }}
     >
-      <X className={`text-gray-500 ${buttonSize[size]}`} />
+      <X className={`${color} ${buttonSize[size]}`} />
     </button>
   );
 }

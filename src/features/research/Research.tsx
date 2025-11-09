@@ -1,9 +1,9 @@
-import type { Research } from '@/contents/research';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/accordion';
+import type { Research } from '@/features/research/contents';
 import useModal from '@/hooks/useModal';
 import { faBookOpen, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './accordion';
 
 export default function Research({
   title,
@@ -18,9 +18,29 @@ export default function Research({
 
   const researchNum = works.length;
 
-  const getJPDate = (date: string) => {
+  const getDateStr = (title: string, date: string) => {
+    const isJapanese = (str: string) => {
+      return /[\u3040-\u30FF\u3400-\u4DBF\u4E00-\u9FFF\uFF01-\uFF60\uFFE0-\uFFE6]/.test(str);
+    }
+
+    const englishMonthDict: Record<string, string> = {
+      '1':  'Jan.',
+      '2':  'Feb.',
+      '3':  'Mar.',
+      '4':  'Apr.',
+      '5':  'May',
+      '6':  'Jun.',
+      '7':  'Jul.',
+      '8':  'Aug.',
+      '9':  'Sep.',
+      '10': 'Oct.',
+      '11': 'Nov.',
+      '12': 'Dec.',
+    };
+
     const [year, month, day] = date.split('-');
-    return `${year}年${month}月${day}日`;
+
+    return isJapanese(title) ? `${year}年${month}月${day}日` : `${englishMonthDict[month]} ${day}th, ${year}`;
   }
 
   const themeColors = {
@@ -47,7 +67,7 @@ export default function Research({
                 {research.number && <span className='pr-1'>{typeof(research.number) === 'number' && 'No.'}{research.number},</span>}
                 <span className='pr-1'>pp.{research.pages},</span>
                 {research.location && <span className='pr-1'>{research.location},</span>}
-                <span>{getJPDate(research.date)}</span>
+                <span>{getDateStr(research.title, research.date)}</span>
               </p>
             </div>
             {research.award && (
@@ -71,7 +91,7 @@ export default function Research({
             )}
             <div className='flex flex-col gap-2 w-full'>
               <div className='flex gap-2 flex-wrap w-full'>
-                <Accordion groupId='domesticConference'>
+                <Accordion groupId={color}>
                   <AccordionItem id={research.id}>
                     <AccordionTrigger>
                       <PublishButton id={research.id} type='bibtex' publish={research.publications.bibtex}>BibTeX</PublishButton>
@@ -83,7 +103,7 @@ export default function Research({
                 <PublishButton id={research.id} type='slide' publish={research.publications.slide}>Slide</PublishButton>
               </div>
               {research.publications.bibtex && 
-                <Accordion groupId='domesticConference'>
+                <Accordion groupId={color}>
                   <AccordionItem id={research.id}>
                     <AccordionContent className='bg-gray-100 rounded-xl'>
                       <BibTeX research={research} />
@@ -167,7 +187,7 @@ export function BibTeX({
   if (research.volume) bibtex += `\tvolume={${research.volume}},\n`;
   if (research.number) bibtex += `\tnumber={${research.number}},\n`;
   bibtex += `\tyear={${research.date.split('-')[0]}},\n`;
-  bibtex += `\tpages={${research.pages}}\n`;
+  bibtex += `\tpages={${research.pages}},\n`;
   if (research.url) bibtex += `\turl={${research.url}}\n`;
   bibtex += '}';
 

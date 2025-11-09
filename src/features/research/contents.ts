@@ -1,7 +1,7 @@
 // Reference: https://mathlandscape.com/latex-bib/
 // BibTeXがどこからかダウンロードできるなら，それをTS形式に変換する関数をつくるのもあり
 
-import { UBI87Award } from "./researchAwardModals/modals"
+import { UBI87Award } from "./awardModals"
 
 export interface Research {
     id: string
@@ -34,7 +34,7 @@ export const internationalConferences: Research[] = [
     {
         id: 'BraiLoop_202501_ICDCN-MUSICAL',
         publications: {
-            bibtex: false,
+            bibtex: true,
             paper: false,
             poster: false,
             slide: false,
@@ -42,15 +42,33 @@ export const internationalConferences: Research[] = [
         entry: 'inproceedings',
         title: 'Tactile Paving Detection and Classification Method Based on Cyclist-Participatory Road Image Sensing',
         author: 'Yuto Matsuda, Yuki Matsuda',
-        bookTitle: 'xxx',
+        bookTitle: 'ICDCN MUSICAL 2026',
         number: 'xx',
-        pages: '1--x',
+        pages: '1--6',
         date: '2026-1-xx',
-        location: 'Nara Kasugano International Forum IRAKA, Nara, Japan.',
+        location: 'Nara Kasugano International Forum IRAKA, Nara, Japan',
     }
 ];
 
 export const domesticConferences: Research[] = [
+    // {
+    //     id: 'BraiLoop_202601_SeMI',
+    //     publications: {
+    //         bibtex: true,
+    //         paper: true,
+    //         poster: false,
+    //         slide: true,
+    //     },
+    //     entry: 'inproceedings',
+    //     title: '自転車ユーザ参加型路面画像センシングにおける点字ブロック検出性能向上手法の検討',
+    //     author: '松田悠斗, 松田裕貴',
+    //     bookTitle: 'xxx',
+    //     volume: 'xxx',
+    //     pages: 'xxx',
+    //     url: 'xxx',
+    //     date: '2026-1-26',
+    //     location: '大分県由布市 湯布院保養所',
+    // },
     {
         id: 'BraiLoop_202509_IPSJ-Kansai',
         publications: {
