@@ -107,5 +107,20 @@ export function AccordionContent({
         {children}
       </div>
     </div>
+    
+    // <div className={`overflow-hidden ${className}`} style={{ maxHeight: height }}>
+    //   <div ref={ref} className={`overflow-x-auto transition-all duration-300 ease-in-out`} >
+    //     {children}
+    //   </div>
+    // </div>
+
+    // <div
+    //   className="overflow-hidden transition-all duration-300 ease-in-out"
+    //   style={{ maxHeight: height }}
+    // >
+    //   <div ref={ref} className={`overflow-x-auto ${className}`}>
+    //     {children}
+    //   </div>
+    // </div>
   )
 }

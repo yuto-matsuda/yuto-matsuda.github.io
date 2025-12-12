@@ -1,6 +1,4 @@
 // Reference: https://mathlandscape.com/latex-bib/
-// BibTeXがどこからかダウンロードできるなら，それをTS形式に変換する関数をつくるのもあり
-
 import { UBI87Award } from "./awardModals"
 
 export interface Research {
@@ -21,7 +19,7 @@ export interface Research {
     url?: string
     date: string
     location?: string
-    award?: Award[]
+    awards?: Award[]
 }
 
 interface Award {
@@ -32,7 +30,7 @@ interface Award {
 
 export const internationalConferences: Research[] = [
     {
-        id: 'BraiLoop_202501_ICDCN-MUSICAL',
+        id: 'BraiLoop_202601_ICDCN-MUSICAL',
         publications: {
             bibtex: true,
             paper: false,
@@ -42,31 +40,70 @@ export const internationalConferences: Research[] = [
         entry: 'inproceedings',
         title: 'Tactile Paving Detection and Classification Method Based on Cyclist-Participatory Road Image Sensing',
         author: 'Yuto Matsuda, Yuki Matsuda',
-        bookTitle: 'ICDCN MUSICAL 2026',
-        number: 'xx',
+        bookTitle: "27th International Conference on Distributed Computing and Networking (ICDCN '26 Companion)",
+        volume: '2026',
         pages: '1--6',
-        date: '2026-1-xx',
+        url: 'xxx',
+        date: '2026-1-6',
         location: 'Nara Kasugano International Forum IRAKA, Nara, Japan',
     }
 ];
 
 export const domesticConferences: Research[] = [
     // {
-    //     id: 'BraiLoop_202601_SeMI',
+    //     id: 'ytv_202603_UBI',
     //     publications: {
-    //         bibtex: true,
-    //         paper: true,
+    //         bibtex: false,
+    //         paper: false,
     //         poster: false,
     //         slide: true,
     //     },
     //     entry: 'inproceedings',
-    //     title: '自転車ユーザ参加型路面画像センシングにおける点字ブロック検出性能向上手法の検討',
+    //     title: '非特定テレビ視聴履歴データを用いた朝帯視聴者獲得の重要性検証',
+    //     author: '松田悠斗, 林虎太朗, 松田裕貴, 池尻拓巨, 横田哲弥, 松田裕貴',
+    //     bookTitle: '研究報告ユビキタスコンピューティングシステム（UBI）',
+    //     // number: 49,
+    //     volume: '2025-UBI-89',
+    //     pages: '1--8',
+    //     url: 'xxx',
+    //     date: '2026-3-1',
+    //     location: '広島県広島市 サテライトキャンパスひろしま',
+        
+    // },
+    // {
+    //     id: 'BraiLoop_202601_SeMI',
+    //     publications: {
+    //         bibtex: true,
+    //         paper: false,
+    //         poster: false,
+    //         slide: true,
+    //     },
+    //     entry: 'inproceedings',
+    //     title: '自転車ユーザ参加型路面画像センシングによる点字ブロック検出における性能向上方法の模索',
     //     author: '松田悠斗, 松田裕貴',
+    //     bookTitle: 'xxx',
+    //     volume: 'xxx',
+    //     pages: '1--6',
+    //     url: 'xxx',
+    //     date: '2026-1-23',
+    //     location: '大分県由布市 湯布院保養所',
+    // },
+    // {
+    //     id: 'ytv_hayashi_202601_SeMI',
+    //     publications: {
+    //         bibtex: true,
+    //         paper: false,
+    //         poster: false,
+    //         slide: true,
+    //     },
+    //     entry: 'inproceedings',
+    //     title: '非特定テレビ視聴履歴データの視聴時間帯特徴に基づく視聴行動クラスタリング分析',
+    //     author: '林虎太朗, 松田悠斗, 松田裕貴, 池尻拓巨, 横田哲弥, 松田裕貴',
     //     bookTitle: 'xxx',
     //     volume: 'xxx',
     //     pages: 'xxx',
     //     url: 'xxx',
-    //     date: '2026-1-26',
+    //     date: '2026-1-22',
     //     location: '大分県由布市 湯布院保養所',
     // },
     {
@@ -105,7 +142,7 @@ export const domesticConferences: Research[] = [
         url: 'https://ipsj.ixsq.nii.ac.jp/records/2003948',
         date: '2025-9-18',
         location: '富山県富山市 富山県民会館',
-        award: [
+        awards: [
             {
                 name: 'UBIヤングリサーチャー賞',
                 url: 'https://sigubi.ipsj.or.jp/excellent/',
@@ -119,6 +156,20 @@ export const domesticConferences: Research[] = [
 ];
 
 export const theses: Research[] = [
+    // {
+    //     id: 'Brailoop_202602_okadai',
+    //     publications: {
+    //         bibtex: true,
+    //         paper: true,
+    //         poster: false,
+    //         slide: true,
+    //     },
+    //     entry: 'thesis',
+    //     title: '自転車ユーザ参加型路面画像センシングによる点字ブロック検出・分類システム',
+    //     bookTitle: '岡山大学 工学部 卒業論文',
+    //     pages: '1--20',
+    //     date: '2026-2-16',
+    // },
     {
         id: 'coropita_202201_okako',
         publications: {
@@ -132,5 +183,5 @@ export const theses: Research[] = [
         bookTitle: '岡山県立岡山工業高等学校 卒業研究発表',
         pages: '1--4',
         date: '2022-1-21',
-    }
+    },
 ];

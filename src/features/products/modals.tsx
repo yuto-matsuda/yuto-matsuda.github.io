@@ -1,4 +1,6 @@
+import bugAwardImg from '@/assets/buguttoru-award.jpg';
 import hkCMSImg from '@/assets/heiterkeit-cms.png';
+import sleemuuAwardImg from '@/assets/sleemuu-award.jpg';
 import sleemuuPRImg from '@/assets/sleemuu-PR.webp';
 import sushiVideo from '@/assets/sushi-king.mp4';
 import shMethodImg from '@/assets/web-syntaxhighlighter_method.png';
@@ -60,7 +62,14 @@ export function BugttoruModal({
         </PMList>
       </PMSection>
       <PMSection heading='受賞'>
-        <PMParagraph>英田エンジニアリング賞</PMParagraph>
+        <PMList>
+          <li>英田エンジニアリング賞</li>
+        </PMList>
+        <img
+          src={bugAwardImg}
+          alt='バグっとる 英田エンジニアリング賞'
+          className='w-full border border-gray-400 rounded-lg mx-auto mt-4 mb-8'
+        />
       </PMSection>
    </ProductModal>     
   )
@@ -233,6 +242,17 @@ export function SleemuuModal({
           <li>React</li>
           <li>Hono</li>
         </PMList>
+      </PMSection>
+      <PMSection heading='受賞'>
+        <PMList>
+          <li>優秀賞</li>
+          <li>チームラボ賞</li>
+        </PMList>
+        <img
+          src={sleemuuAwardImg}
+          alt='Sleemuu 優秀賞・チームラボ賞'
+          className='w-full border border-gray-400 rounded-lg mx-auto mt-4 mb-8'
+        />
       </PMSection>
       <PMSection heading='アプリPR'>
         <img

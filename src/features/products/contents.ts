@@ -7,7 +7,17 @@ import sushiking from '@/assets/sushiking.png';
 import webSyntaxHighlighter from '@/assets/web-syntaxhighlighter.png';
 import { BugttoruModal, CertificateExamModal, CoropitaModal, HeiterkeitModal, SleemuuModal, SushiKingModal, WebSyntaxHighlighterModal } from './modals';
 
-export const products = [
+export interface Product {
+    id: string
+    title: string
+    img: string
+    description: string
+    tags: string[]
+    modal: React.ComponentType<any>
+    awards?: string[]
+}
+
+export const products: Product[] = [
     {
         id: 'coropita',
         title: 'コロピタ',
@@ -23,7 +33,7 @@ export const products = [
         description: '入った虫を自動で捕まえるIoT虫カゴ。(2023年度Web×IoTメイカーズチャレンジ)',
         tags: ['Python', 'Raspberry Pi'],
         modal: BugttoruModal,
-        award: 'other',
+        awards: ['other'],
     },
     {
         id: 'heiterkeit',
@@ -63,7 +73,7 @@ export const products = [
         img: sleemuu,
         description: '協力型睡眠改善アプリ。(Tornadoハッカソン2025)',
         tags: ['React Native', 'React'],
-        award: 'silver',
+        awards: ['silver', 'other'],
         modal: SleemuuModal,
     }
 ];

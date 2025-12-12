@@ -70,9 +70,9 @@ export default function Research({
                 <span>{getDateStr(research.title, research.date)}</span>
               </p>
             </div>
-            {research.award && (
+            {research.awards && (
               <div className='flex gap-2 flex-wrap'>
-                {research.award.map(({ name, url, modal: Modal }, i) => {
+                {research.awards.map(({ name, url, modal: Modal }, i) => {
                   const className = 'w-fit text-xs text-mga-3 font-semibold bg-radial-light rounded-2xl py-0.5 px-2'
                   if (url) {
                     return <a key={i} href={url} target='_blank' className={className}>{name}</a>

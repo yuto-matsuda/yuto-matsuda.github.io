@@ -77,6 +77,13 @@ export const certifications = [
       date:        '2023.07.09'
     },
     {
+      category:    'IT',
+      name:        'enPiT-Security Basic SecCap 8',
+      association: '文部科学省',
+      result:      '認定',
+      date:        '2025.02.28'
+    },
+    {
       category:    'English',
       name:        'TOEIC\u00AE Listening & Reading Test',
       association: '国際ビジネスコミュニケーション協会',
