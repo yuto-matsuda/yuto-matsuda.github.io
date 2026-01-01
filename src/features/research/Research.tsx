@@ -12,7 +12,7 @@ export default function Research({
 }: {
   title: string
   works: Research[]
-  color: 'blue' | 'purple' | 'green'
+  color: 'blue' | 'purple' | 'green' | 'grass'
 }) {
   const [isOpen, openModal, closeModal] = useModal();
 
@@ -39,6 +39,7 @@ export default function Research({
     };
 
     const [year, month, day] = date.split('-');
+    if (!month || !day) return year;
 
     return isJapanese(title) ? `${year}年${month}月${day}日` : `${englishMonthDict[month]} ${day}th, ${year}`;
   }
@@ -47,6 +48,7 @@ export default function Research({
     blue:   'text-mga-blue',
     purple: 'text-mga-purple',
     green:  'text-mga-green',
+    grass:  'text-mga-grass',
   };  
 
   return (

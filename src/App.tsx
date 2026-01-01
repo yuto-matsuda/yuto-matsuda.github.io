@@ -94,6 +94,7 @@ export default function App() {
           <div className='max-w-5xl mx-auto'>
             <h1 className='text-3xl text-mga-black font-semibold text-center mb-8'>Research</h1>
             <div className='space-y-4'>
+              {/* <Research title='論文誌' works={journalPapers} color='grass' /> */}
               <Research title='国際学会' works={internationalConferences} color='purple' />
               <Research title='国内研究会' works={domesticConferences} color='blue' />
               <Research title='学位論文' works={theses} color='green' />

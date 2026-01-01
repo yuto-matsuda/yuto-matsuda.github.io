@@ -75,5 +75,21 @@ export const products: Product[] = [
         tags: ['React Native', 'React'],
         awards: ['silver', 'other'],
         modal: SleemuuModal,
-    }
+    },
+    // {
+    //     id: 'brailoop',
+    //     title: 'BraiLoop',
+    //     img: sleemuu,
+    //     description: 'カメラ付き自転車で走るだけ！街中の点字ブロックデータを収集。',
+    //     tags: ['YOLO11', 'M5Stack'],
+    //     modal: SleemuuModal,
+    // },
+    // {
+    //     id: 'mapotheke',
+    //     title: 'MAPotheke',
+    //     img: sleemuu,
+    //     description: 'Apotheke(ドイツの薬局)を集める、それだけのアプリです。',
+    //     tags: ['YOLO12', 'React'],
+    //     modal: SleemuuModal,
+    // },
 ];

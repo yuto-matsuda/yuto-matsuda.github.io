@@ -182,7 +182,7 @@ export function WebSyntaxHighlighterModal({
         />
       </PMSection>
       <PMSection heading='リンク'>
-        <Link to='https://yuto-matsuda.github.io/web-syntax-highlighter/'>Web SyntaxHighlighter</Link>
+        <Link to='https://yuto-matsuda.github.io/web-syntaxhighlighter/dst/'>Web SyntaxHighlighter</Link>
       </PMSection>
    </ProductModal>     
   )
