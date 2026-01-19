@@ -66,6 +66,13 @@ export const awardsRecieved: AwardsRecieved[] = [
         ],
     },
     {
+        date: '2025.9.18',
+        awards: [
+            '第87回UBI研究会 UBIヤングリサーチャー賞',
+            '第44回CDS研究会 デモ・ポスターコミュニケーション部門賞'
+        ],
+    },
+    {
         date: '2025.11.1',
         awards: ['第8回 金光賞'],
     },

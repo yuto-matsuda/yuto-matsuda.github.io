@@ -1,6 +1,7 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/accordion';
 import type { Research } from '@/features/research/contents';
 import useModal from '@/hooks/useModal';
+import { faSlideshare } from '@fortawesome/free-brands-svg-icons';
 import { faBookOpen, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
@@ -94,7 +95,7 @@ export default function Research({
             <div className='flex flex-col gap-2 w-full'>
               <div className='flex gap-2 flex-wrap w-full'>
                 <Accordion groupId={color}>
-                  <AccordionItem id={research.id}>
+                  <AccordionItem id={`bibtex-${research.id}`}>
                     <AccordionTrigger>
                       <PublishButton id={research.id} type='bibtex' publish={research.publications.bibtex}>BibTeX</PublishButton>
                     </AccordionTrigger>
@@ -102,13 +103,31 @@ export default function Research({
                 </Accordion>
                 <PublishButton id={research.id} type='paper' publish={research.publications.paper}>Paper</PublishButton>
                 <PublishButton id={research.id} type='poster' publish={research.publications.poster}>Poster</PublishButton>
-                <PublishButton id={research.id} type='slide' publish={research.publications.slide}>Slide</PublishButton>
+                <Accordion groupId={color}>
+                  <AccordionItem id={`slide-${research.id}`}>
+                    <AccordionTrigger>
+                      <PublishButton id={research.id} type='slide' publish={!!research.publications.slide}>Slide</PublishButton>
+                    </AccordionTrigger>
+                  </AccordionItem>
+                </Accordion>
               </div>
               {research.publications.bibtex && 
                 <Accordion groupId={color}>
-                  <AccordionItem id={research.id}>
+                  <AccordionItem id={`bibtex-${research.id}`}>
                     <AccordionContent className='bg-gray-100 rounded-xl'>
                       <BibTeX research={research} />
+                    </AccordionContent>
+                  </AccordionItem>  
+                </Accordion>
+              }
+              {research.publications.slide && 
+                <Accordion groupId={color}>
+                  <AccordionItem id={`slide-${research.id}`}>
+                    <AccordionContent className='bg-gray-100 rounded-xl'>
+                      <EmbeddedSlide
+                        src={research.publications.slide}
+                        title={research.title}
+                      />
                     </AccordionContent>
                   </AccordionItem>  
                 </Accordion>
@@ -165,6 +184,13 @@ function PublishButton({
         <FontAwesomeIcon icon={faBookOpen} className='pr-1' />
         {children}
     </button>
+  ) : type === 'slide' ? (
+    <button
+      className={`flex items-center bg-mga-3 text-xs md:text-sm text-white rounded-lg px-1 md:px-2 py-1 transition-color duration-300 hover:bg-mga-1 cursor-pointer ${!publish && disabledStyle}`}
+    >
+        <FontAwesomeIcon icon={faSlideshare} className='pr-1' />
+        {children}
+    </button>
   ) : (
     <a
       href={`/portfolio/${dir}/${id}.pdf`}
@@ -198,5 +224,27 @@ export function BibTeX({
     <pre className='text-xs md:text-sm font-mono px-4 py-2 w-16'>
       <code>{bibtex}</code>
     </pre>
+  )
+}
+
+function EmbeddedSlide({
+  src,
+  title
+}: {
+  src: string
+  title: string
+}) {
+  return (
+    <iframe
+      src={src}
+      title={title}
+      allowFullScreen
+      className="max-w-[600px] rounded-lg mx-auto"
+      style={{
+        background: "rgba(0, 0, 0, 0.1)",
+        boxShadow: "rgba(0, 0, 0, 0.2) 0px 5px 40px",
+        aspectRatio: "16 / 11",
+      }}
+    />
   )
 }

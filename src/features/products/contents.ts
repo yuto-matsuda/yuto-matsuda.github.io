@@ -1,3 +1,4 @@
+import brailoop from '@/assets/brailoop.png';
 import buguttoru from '@/assets/buguttoru.jpg';
 import certificateExamTracer from '@/assets/certificate-exam-tracer.png';
 import coropita from '@/assets/coropita.png';
@@ -5,7 +6,7 @@ import heiterkeit from '@/assets/heiterkeit.png';
 import sleemuu from '@/assets/sleemuu.png';
 import sushiking from '@/assets/sushiking.png';
 import webSyntaxHighlighter from '@/assets/web-syntaxhighlighter.png';
-import { BugttoruModal, CertificateExamModal, CoropitaModal, HeiterkeitModal, SleemuuModal, SushiKingModal, WebSyntaxHighlighterModal } from './modals';
+import { BraiLoopModal, BugttoruModal, CertificateExamModal, CoropitaModal, HeiterkeitModal, SleemuuModal, SushiKingModal, WebSyntaxHighlighterModal } from './modals';
 
 export interface Product {
     id: string
@@ -76,14 +77,14 @@ export const products: Product[] = [
         awards: ['silver', 'other'],
         modal: SleemuuModal,
     },
-    // {
-    //     id: 'brailoop',
-    //     title: 'BraiLoop',
-    //     img: sleemuu,
-    //     description: 'カメラ付き自転車で走るだけ！街中の点字ブロックデータを収集。',
-    //     tags: ['YOLO11', 'M5Stack'],
-    //     modal: SleemuuModal,
-    // },
+    {
+        id: 'brailoop',
+        title: 'BraiLoop',
+        img: brailoop,
+        description: 'カメラ付き自転車で走るだけ！街中の点字ブロックデータを収集。',
+        tags: ['YOLO11', 'M5Stack'],
+        modal: BraiLoopModal,
+    },
     // {
     //     id: 'mapotheke',
     //     title: 'MAPotheke',

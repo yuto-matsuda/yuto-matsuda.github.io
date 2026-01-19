@@ -264,3 +264,36 @@ export function SleemuuModal({
    </ProductModal>     
   )
 }
+
+export function BraiLoopModal({
+  isOpen,
+  closeModal,
+  thumbnail
+}: {
+  isOpen: boolean
+  closeModal: () => void
+  thumbnail: string
+}) {
+  return (
+    <ProductModal isOpen={isOpen} closeModal={closeModal} title='BraiLoop' thumbnail={thumbnail}>
+      <PMSection heading='プロダクト概要'>
+        <PMParagraph>
+          小型カメラを装着した自転車で街を走ることで路面データを収集し、画像認識により点字ブロックを検出します。
+          検出された点字ブロックはWebアプリ上に表示され、管理・点検に活用できます。
+        </PMParagraph>
+      </PMSection>
+      <PMSection heading='使用技術'>
+        <PMList>
+          <li>M5Stack</li>
+          <li>Arduino</li>
+          <li>Python</li>
+          <li>YOLO11</li>
+          <li>React</li>
+        </PMList>
+      </PMSection>
+      <PMSection heading='リンク'>
+        <Link to='https://brailoop.cocolab.jp/'>BraiLoop</Link>
+      </PMSection>
+   </ProductModal>     
+  )
+}
