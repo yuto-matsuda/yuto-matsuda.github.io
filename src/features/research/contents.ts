@@ -74,7 +74,7 @@ export const domesticConferences: Research[] = [
             bibtex: true,
             paper: true,
             poster: false,
-            slide: 'https://www.slideshare.net/slideshow/embed_code/key/xYrgGJUWwqcawP?hostedIn=slideshare&page=upload',
+            slide: 'https://www.slideshare.net/slideshow/embed_code/key/fomQ0v6GMtDDoi?hostedIn=slideshare&page=upload',
         },
         entry: 'inproceedings',
         title: '自転車ユーザ参加型路面画像センシングによる点字ブロック検出における性能向上方法の模索',
@@ -104,7 +104,7 @@ export const domesticConferences: Research[] = [
         pages: '1--6',
         url: 'https://ken.ieice.org/ken/paper/20260122ZcqZ/',
         date: '2026-1-22',
-        location: '大分県由布市 湯布院保養所',
+        location: '大分県由布市 三菱電機 湯布院保養所',
     },
     {
         id: 'BraiLoop_202509_IPSJ-Kansai',

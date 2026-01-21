@@ -239,12 +239,8 @@ function EmbeddedSlide({
       src={src}
       title={title}
       allowFullScreen
-      className="max-w-[600px] w-full rounded-lg mx-auto"
-      style={{
-        background: "rgba(0, 0, 0, 0.1)",
-        boxShadow: "rgba(0, 0, 0, 0.2) 0px 5px 40px",
-        aspectRatio: "16 / 11",
-      }}
+      className="max-w-[600px] w-full rounded-lg mx-auto shadow-2xl"
+      style={{ aspectRatio: "16 / 11" }}
     />
   )
 }
