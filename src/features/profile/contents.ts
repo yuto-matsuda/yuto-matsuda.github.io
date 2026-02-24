@@ -24,6 +24,13 @@ export const eduBg: EducationalBackground[] = [
         period: '2023.8-2023.9',
         affiliation: ['Ruhr Universität Bochum / ZFA (Summer School 2023)'],
     },
+    {
+        period: '2026.4-now',
+        affiliation: [
+            '岡山大学大学院 環境生命自然科学研究科 計算機科学コース 博士前期課程',
+            'コンヴィヴィアルコンピューティング研究室',
+        ],
+    },
 ];
 
 export const awardsRecieved: AwardsRecieved[] = [

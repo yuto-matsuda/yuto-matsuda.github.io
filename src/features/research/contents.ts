@@ -30,7 +30,7 @@ interface Award {
 
 export const journalPapers: Research[] = [
     {
-        id: 'BraiLoop_202602_xxx',
+        id: 'BraiLoop_202603_xxx',
         publications: {
             bibtex: false,
             paper: false,
@@ -40,7 +40,7 @@ export const journalPapers: Research[] = [
         entry: 'article',
         title: 'Tactile Paving Detection and Classification Method Based on Cyclist-Participatory Road Image Sensing',
         author: 'Yuto Matsuda, Yuki Matsuda',
-        bookTitle: 'xxx',
+        bookTitle: 'IEEE Access',
         pages: 'xxx',
         url: 'xxx',
         date: '2026',
@@ -68,6 +68,25 @@ export const internationalConferences: Research[] = [
 ];
 
 export const domesticConferences: Research[] = [
+    // {
+    //     id: 'ytv_202605_DPS',
+    //     publications: {
+    //         bibtex: true,
+    //         paper: true,
+    //         poster: false,
+    //         slide: null,
+    //     },
+    //     entry: 'inproceedings',
+    //     title: '非特定テレビ視聴履歴データを用いた朝帯視聴の重要性分析',
+    //     author: '松田悠斗, 林虎太朗, 松田裕貴, 池尻拓巨, 横田哲弥, 松田裕貴',
+    //     bookTitle: 'xxx',
+    //     // volume: 127,
+    //     // number: 325,
+    //     pages: '',
+    //     url: '',
+    //     date: '2026-5-13',
+    //     location: '沖縄県 宮古島市 宮古島市未来創造センター',
+    // },
     {
         id: 'BraiLoop_202601_SeMI',
         publications: {
@@ -156,20 +175,20 @@ export const domesticConferences: Research[] = [
 ];
 
 export const theses: Research[] = [
-    // {
-    //     id: 'Brailoop_202602_okadai',
-    //     publications: {
-    //         bibtex: true,
-    //         paper: true,
-    //         poster: false,
-    //         slide: true,
-    //     },
-    //     entry: 'thesis',
-    //     title: '自転車ユーザ参加型路面画像センシングによる点字ブロック検出・分類システム',
-    //     bookTitle: '岡山大学 工学部 卒業論文',
-    //     pages: 'xxx',
-    //     date: '2026-2-16',
-    // },
+    {
+        id: 'Brailoop_202602_bthesis',
+        publications: {
+            bibtex: true,
+            paper: true,
+            poster: false,
+            slide: null,
+        },
+        entry: 'thesis',
+        title: '自転車ユーザ参加型路面画像センシングによる点字ブロック検出・分類手法の提案と評価',
+        bookTitle: '岡山大学 工学部 特別研究報告書',
+        pages: '1--24',
+        date: '2026-2-9',
+    },
     {
         id: 'coropita_202201_okako',
         publications: {

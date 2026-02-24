@@ -89,5 +89,12 @@ export const certifications = [
       association: '国際ビジネスコミュニケーション協会',
       result:      '700点',
       date:        '2025.03.18'
-    }
+    },
+    {
+      category:    'Education',
+      name:        '高等学校教諭一種免許状（情報）',
+      association: '岡山県教育委員会',
+      result:      '取得',
+      date:        '2026.03.xx'
+    },
   ];

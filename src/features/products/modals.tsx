@@ -288,6 +288,7 @@ export function BraiLoopModal({
           <li>Arduino</li>
           <li>Python</li>
           <li>YOLO11</li>
+          <li>ResNet18</li>
           <li>React</li>
         </PMList>
       </PMSection>

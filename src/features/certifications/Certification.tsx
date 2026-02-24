@@ -17,6 +17,7 @@ export default function Certification({
     Japanese: 'text-red-400',
     German:   'text-orange-300',
     Industry: 'text-purple-300',
+    Education: 'text-green-300',
   };
 
   return (
