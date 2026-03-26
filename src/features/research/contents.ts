@@ -30,7 +30,7 @@ interface Award {
 
 export const journalPapers: Research[] = [
     {
-        id: 'BraiLoop_202603_xxx',
+        id: 'BraiLoop_202603_IEEE-Access',
         publications: {
             bibtex: false,
             paper: false,
@@ -38,7 +38,7 @@ export const journalPapers: Research[] = [
             slide: null,
         },
         entry: 'article',
-        title: 'Tactile Paving Detection and Classification Method Based on Cyclist-Participatory Road Image Sensing',
+        title: 'Cyclist-Participatory Sensing for Detecting and Classifying Tactile Paving',
         author: 'Yuto Matsuda, Yuki Matsuda',
         bookTitle: 'IEEE Access',
         pages: 'xxx',
@@ -71,14 +71,14 @@ export const domesticConferences: Research[] = [
     // {
     //     id: 'ytv_202605_DPS',
     //     publications: {
-    //         bibtex: true,
-    //         paper: true,
+    //         bibtex: false,
+    //         paper: false,
     //         poster: false,
     //         slide: null,
     //     },
     //     entry: 'inproceedings',
-    //     title: '非特定テレビ視聴履歴データを用いた朝帯視聴の重要性分析',
-    //     author: '松田悠斗, 林虎太朗, 松田裕貴, 池尻拓巨, 横田哲弥, 松田裕貴',
+    //     title: '非特定テレビ視聴履歴データの分析に基づくホームチャンネル存在傾向の考察',
+    //     author: '松田悠斗, 林虎太朗, 池尻拓巨, 松田裕貴, 横田哲弥, 松田裕貴',
     //     bookTitle: 'xxx',
     //     // volume: 127,
     //     // number: 325,

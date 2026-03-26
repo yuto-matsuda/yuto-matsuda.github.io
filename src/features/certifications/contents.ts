@@ -77,13 +77,6 @@ export const certifications = [
       date:        '2023.07.09'
     },
     {
-      category:    'IT',
-      name:        'enPiT-Security Basic SecCap 8',
-      association: '文部科学省',
-      result:      '認定',
-      date:        '2025.02.28'
-    },
-    {
       category:    'English',
       name:        'TOEIC\u00AE Listening & Reading Test',
       association: '国際ビジネスコミュニケーション協会',
@@ -91,10 +84,17 @@ export const certifications = [
       date:        '2025.03.18'
     },
     {
+      category:    'IT',
+      name:        'enPiT-Security Basic SecCap 10',
+      association: '文部科学省',
+      result:      '認定',
+      date:        '2026.03.04'
+    },
+    {
       category:    'Education',
       name:        '高等学校教諭一種免許状（情報）',
       association: '岡山県教育委員会',
       result:      '取得',
-      date:        '2026.03.xx'
+      date:        '2026.03.25'
     },
   ];
