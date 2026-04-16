@@ -68,25 +68,25 @@ export const internationalConferences: Research[] = [
 ];
 
 export const domesticConferences: Research[] = [
-    // {
-    //     id: 'ytv_202605_DPS',
-    //     publications: {
-    //         bibtex: false,
-    //         paper: false,
-    //         poster: false,
-    //         slide: null,
-    //     },
-    //     entry: 'inproceedings',
-    //     title: '非特定テレビ視聴履歴データの分析に基づくホームチャンネル存在傾向の考察',
-    //     author: '松田悠斗, 林虎太朗, 池尻拓巨, 松田裕貴, 横田哲弥, 松田裕貴',
-    //     bookTitle: 'xxx',
-    //     // volume: 127,
-    //     // number: 325,
-    //     pages: '',
-    //     url: '',
-    //     date: '2026-5-13',
-    //     location: '沖縄県 宮古島市 宮古島市未来創造センター',
-    // },
+    {
+        id: 'ytv_202605_DPS',
+        publications: {
+            bibtex: true,
+            paper: true,
+            poster: false,
+            slide: null,
+        },
+        entry: 'inproceedings',
+        title: '非特定テレビ視聴履歴データの分析に基づくホームチャンネル存在傾向の考察',
+        author: '松田悠斗, 林虎太朗, 池尻拓巨, 松田裕貴, 横田哲弥, 松田裕貴',
+        bookTitle: '研究報告マルチメディア通信と分散処理（DPS）',
+        volume: '2026-DPS-207',
+        number: 35,
+        pages: '1--7',
+        url: '',
+        date: '2026-5-15',
+        location: '沖縄県 宮古島市 宮古島市未来創造センター',
+    },
     {
         id: 'BraiLoop_202601_SeMI',
         publications: {

@@ -24,8 +24,8 @@ export default function ProfileCard() {
         </div>
         <div className='flex items-center justify-center mx-4 md:mx-0 md:ml-[70px] md:mr-4'>
           <p>
-            岡山県出身21歳。
-            岡山大学4回生で、2025年度からは<a href='https://cocolab.jp/' target='_blank' className='text-mga-blue border-b border-mga-blue px-1'>コンヴィヴィアルコンピューティング研究室</a>にてセンシングやAI, データ分析をメインテーマに研究しています。
+            岡山県出身22歳。
+            岡山大学修士1年生で、2025年度からは<a href='https://cocolab.jp/' target='_blank' className='text-mga-blue border-b border-mga-blue px-1'>コンヴィヴィアルコンピューティング研究室</a>にてセンシングやAI, データ分析をメインテーマに研究しています。
             得意分野はWebアプリ開発です。
           </p>
         </div>
