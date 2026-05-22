@@ -30,7 +30,7 @@ interface Award {
 
 export const journalPapers: Research[] = [
     {
-        id: 'BraiLoop_202603_IEEE-Access',
+        id: 'BraiLoop_202603_IEEEAccess',
         publications: {
             bibtex: false,
             paper: false,
@@ -73,7 +73,7 @@ export const domesticConferences: Research[] = [
         publications: {
             bibtex: true,
             paper: true,
-            poster: false,
+            poster: true,
             slide: null,
         },
         entry: 'inproceedings',
@@ -83,9 +83,15 @@ export const domesticConferences: Research[] = [
         volume: '2026-DPS-207',
         number: 35,
         pages: '1--7',
-        url: '',
+        url: 'https://ipsj.ixsq.nii.ac.jp/records/2009246',
         date: '2026-5-15',
-        location: '沖縄県 宮古島市 宮古島市未来創造センター',
+        location: '沖縄県宮古島市 宮古島市未来創造センター',
+        awards: [
+            {
+                name: '優秀ポスター賞',
+                url: '',
+            },
+        ],
     },
     {
         id: 'BraiLoop_202601_SeMI',

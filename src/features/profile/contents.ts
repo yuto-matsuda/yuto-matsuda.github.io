@@ -83,4 +83,8 @@ export const awardsRecieved: AwardsRecieved[] = [
         date: '2025.11.1',
         awards: ['第8回 金光賞'],
     },
+    {
+        date: '2026.5.15',
+        awards: ['第207回DPS研究会 優秀ポスター賞'],
+    },
 ];
