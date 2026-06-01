@@ -87,4 +87,8 @@ export const awardsRecieved: AwardsRecieved[] = [
         date: '2026.5.15',
         awards: ['第207回DPS研究会 優秀ポスター賞'],
     },
+    {
+        date: '2026.5.31',
+        awards: ['TERACKATHON 10th カタルシス賞'],
+    },
 ];

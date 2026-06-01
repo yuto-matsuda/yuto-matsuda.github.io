@@ -298,3 +298,40 @@ export function BraiLoopModal({
    </ProductModal>     
   )
 }
+
+export function MatsuRippleModal({
+  isOpen,
+  closeModal,
+  thumbnail
+}: {
+  isOpen: boolean
+  closeModal: () => void
+  thumbnail: string
+}) {
+  return (
+    <ProductModal isOpen={isOpen} closeModal={closeModal} title='MatsuRipple' thumbnail={thumbnail}>
+      <PMSection heading='プロダクト概要'>
+        <PMParagraph>
+          地方の人手不足のお祭りに特化した地図型マッチングアプリ。
+          投稿から参加まで、簡単に手続きが可能で、グループ単位での登録もできます。
+        </PMParagraph>
+      </PMSection>
+      <PMSection heading='使用技術'>
+        <PMList>
+          <li>Claude Code</li>
+          <li>Claude Design</li>
+          <li>React</li>
+          <li>FastAPI</li>
+        </PMList>
+      </PMSection>
+      <PMSection heading='受賞'>
+        <PMList>
+          <li>カタルシス賞（企業賞）</li>
+        </PMList>
+      </PMSection>
+      <PMSection heading='リンク'>
+        <Link to='https://yuto-matsuda.github.io/MatsuRipple/'>MatsuRipple</Link>
+      </PMSection>
+   </ProductModal>     
+  )
+}

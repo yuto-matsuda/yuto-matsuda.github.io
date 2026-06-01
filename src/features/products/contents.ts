@@ -3,10 +3,11 @@ import buguttoru from '@/assets/buguttoru.jpg';
 import certificateExamTracer from '@/assets/certificate-exam-tracer.png';
 import coropita from '@/assets/coropita.png';
 import heiterkeit from '@/assets/heiterkeit.png';
+import matsuripple from '@/assets/matsuripple.png';
 import sleemuu from '@/assets/sleemuu.png';
 import sushiking from '@/assets/sushiking.png';
 import webSyntaxHighlighter from '@/assets/web-syntaxhighlighter.png';
-import { BraiLoopModal, BugttoruModal, CertificateExamModal, CoropitaModal, HeiterkeitModal, SleemuuModal, SushiKingModal, WebSyntaxHighlighterModal } from './modals';
+import { BraiLoopModal, BugttoruModal, CertificateExamModal, CoropitaModal, HeiterkeitModal, MatsuRippleModal, SleemuuModal, SushiKingModal, WebSyntaxHighlighterModal } from './modals';
 
 export interface Product {
     id: string
@@ -84,6 +85,15 @@ export const products: Product[] = [
         description: 'カメラ付き自転車で走るだけ！街中の点字ブロックデータを収集。',
         tags: ['YOLO11', 'M5Stack'],
         modal: BraiLoopModal,
+    },
+    {
+        id: 'matsuripple',
+        title: 'MatsuRipple',
+        img: matsuripple,
+        description: '地方の祭りとあなたを繋げる新感覚マッチングアプリ。(TERACKATHON 10th)',
+        tags: ['Claude Code', 'Claude Design'],
+        modal: MatsuRippleModal,
+        awards: ['other'],
     },
     // {
     //     id: 'mapotheke',

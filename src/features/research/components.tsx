@@ -16,7 +16,7 @@ export function ResearchAwardModal({
       <img
         src={certificate}
         alt={title}
-        className='max-w-[80vw] max-h-[80vh] object-contain border border-gray-400 mx-auto pointer-events-none'
+        className='max-w-[800px] max-h-[80vh] object-contain border border-gray-400 mx-auto pointer-events-none'
       />
     </Modal>
   )

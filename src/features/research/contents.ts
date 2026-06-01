@@ -1,5 +1,5 @@
 // Reference: https://mathlandscape.com/latex-bib/
-import { UBI87Award } from "./awardModals"
+import { DPS207Award, UBI87Award } from "./awardModals"
 
 export interface Research {
     id: string
@@ -89,7 +89,7 @@ export const domesticConferences: Research[] = [
         awards: [
             {
                 name: '優秀ポスター賞',
-                url: '',
+                modal: DPS207Award,
             },
         ],
     },
