@@ -193,7 +193,7 @@ function PublishButton({
     </button>
   ) : (
     <a
-      href={`/portfolio/${dir}/${id}.pdf`}
+      href={`/${dir}/${id}.pdf`}
       target='_blank'
       className={`flex items-center bg-mga-3 text-xs md:text-sm text-white rounded-lg px-1 md:px-2 py-1 transition-color duration-300 hover:bg-mga-1 ${!publish && disabledStyle}`}
     >
