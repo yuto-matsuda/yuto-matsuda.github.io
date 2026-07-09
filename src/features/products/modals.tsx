@@ -335,3 +335,35 @@ export function MatsuRippleModal({
    </ProductModal>     
   )
 }
+
+export function TaPaTModal({
+  isOpen,
+  closeModal,
+  thumbnail
+}: {
+  isOpen: boolean
+  closeModal: () => void
+  thumbnail: string
+}) {
+  return (
+    <ProductModal isOpen={isOpen} closeModal={closeModal} title='TaPaT' thumbnail={thumbnail}>
+      <PMSection heading='プロダクト概要'>
+        <PMParagraph>
+          点字ブロックのためだけのアノテーションツール。
+          自動アノテーションや複数一括編集などの機能を備え、アノテーション効率を最大化します。
+        </PMParagraph>
+      </PMSection>
+      <PMSection heading='使用技術'>
+        <PMList>
+          <li>React</li>
+          <li>FastAPI</li>
+          <li>YOLO11</li>
+          <li>ResNet18</li>
+        </PMList>
+      </PMSection>
+      <PMSection heading='リンク'>
+        <Link to='https://github.com/cocolabJP/TaPaT'>GitHub</Link>
+      </PMSection>
+   </ProductModal>     
+  )
+}

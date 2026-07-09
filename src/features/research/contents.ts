@@ -30,7 +30,7 @@ interface Award {
 
 export const journalPapers: Research[] = [
     {
-        id: 'BraiLoop_202603_IEEEAccess',
+        id: 'BraiLoop_202606_IPSJ-JIP',
         publications: {
             bibtex: false,
             paper: false,

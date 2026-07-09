@@ -6,8 +6,9 @@ import heiterkeit from '@/assets/heiterkeit.png';
 import matsuripple from '@/assets/matsuripple.png';
 import sleemuu from '@/assets/sleemuu.png';
 import sushiking from '@/assets/sushiking.png';
+import tapat from '@/assets/tapat.png';
 import webSyntaxHighlighter from '@/assets/web-syntaxhighlighter.png';
-import { BraiLoopModal, BugttoruModal, CertificateExamModal, CoropitaModal, HeiterkeitModal, MatsuRippleModal, SleemuuModal, SushiKingModal, WebSyntaxHighlighterModal } from './modals';
+import { BraiLoopModal, BugttoruModal, CertificateExamModal, CoropitaModal, HeiterkeitModal, MatsuRippleModal, SleemuuModal, SushiKingModal, TaPaTModal, WebSyntaxHighlighterModal } from './modals';
 
 export interface Product {
     id: string
@@ -94,6 +95,14 @@ export const products: Product[] = [
         tags: ['Claude Code', 'Claude Design'],
         modal: MatsuRippleModal,
         awards: ['other'],
+    },
+    {
+        id: 'tapat',
+        title: 'TaPaT',
+        img: tapat,
+        description: '点字ブロック専用のアノテーションツール。欲しい機能をすべて詰め込みました。',
+        tags: ['React', 'FastAPI'],
+        modal: TaPaTModal,
     },
     // {
     //     id: 'mapotheke',
