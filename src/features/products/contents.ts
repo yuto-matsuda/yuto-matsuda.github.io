@@ -7,8 +7,9 @@ import matsuripple from '@/assets/matsuripple.png';
 import sleemuu from '@/assets/sleemuu.png';
 import sushiking from '@/assets/sushiking.png';
 import tapat from '@/assets/tapat.png';
+import thesisManager from '@/assets/thesis-manager.png';
 import webSyntaxHighlighter from '@/assets/web-syntaxhighlighter.png';
-import { BraiLoopModal, BugttoruModal, CertificateExamModal, CoropitaModal, HeiterkeitModal, MatsuRippleModal, SleemuuModal, SushiKingModal, TaPaTModal, WebSyntaxHighlighterModal } from './modals';
+import { BraiLoopModal, BugttoruModal, CertificateExamModal, CoropitaModal, HeiterkeitModal, MatsuRippleModal, SleemuuModal, SushiKingModal, TaPaTModal, ThesisManagerModal, WebSyntaxHighlighterModal } from './modals';
 
 export interface Product {
     id: string
@@ -103,6 +104,14 @@ export const products: Product[] = [
         description: '点字ブロック専用のアノテーションツール。欲しい機能をすべて詰め込みました。',
         tags: ['React', 'FastAPI'],
         modal: TaPaTModal,
+    },
+    {
+        id: 'thesis-manager',
+        title: 'Thesis Manager',
+        img: thesisManager,
+        description: '論文の一元管理アプリ。ジャンル分けやメモ機能を搭載。',
+        tags: ['React', 'Hono'],
+        modal: ThesisManagerModal,
     },
     // {
     //     id: 'mapotheke',

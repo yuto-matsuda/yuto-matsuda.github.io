@@ -367,3 +367,33 @@ export function TaPaTModal({
    </ProductModal>     
   )
 }
+
+export function ThesisManagerModal({
+  isOpen,
+  closeModal,
+  thumbnail
+}: {
+  isOpen: boolean
+  closeModal: () => void
+  thumbnail: string
+}) {
+  return (
+    <ProductModal isOpen={isOpen} closeModal={closeModal} title='Thesis Manager' thumbnail={thumbnail}>
+      <PMSection heading='プロダクト概要'>
+        <PMParagraph>
+          論文の一元管理アプリ。
+          ジャンル分けやメモ機能を搭載し、論文サーベイや関連研究の整理を支援します。
+        </PMParagraph>
+      </PMSection>
+      <PMSection heading='使用技術'>
+        <PMList>
+          <li>React</li>
+          <li>Hono</li>
+        </PMList>
+      </PMSection>
+      <PMSection heading='リンク'>
+        <Link to='https://github.com/yuto-matsuda/thesis-manager'>GitHub</Link>
+      </PMSection>
+   </ProductModal>     
+  )
+}
